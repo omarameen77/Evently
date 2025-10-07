@@ -1,8 +1,10 @@
 import 'package:evently/core/consts/app_image.dart';
 import 'package:evently/core/theme/app_colors.dart';
 import 'package:evently/core/theme/app_text_style/app_text_style.dart';
+import 'package:evently/features/auth/login_screen.dart';
 import 'package:evently/features/onboarding/widgets/custom_pageIntro.dart';
 import 'package:evently/generated/l10n.dart';
+import 'package:evently/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -16,6 +18,7 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen> {
   PageController controller = PageController();
+    final ThemeProvider themeProvider = ThemeProvider();
 
   bool onLastPage = false;
   bool onFirstPage = true;
@@ -80,7 +83,7 @@ class _IntroScreenState extends State<IntroScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(20.0),
           child: Stack(
             children: [
               Align(
@@ -108,7 +111,6 @@ class _IntroScreenState extends State<IntroScreen> {
                   },
                 ),
               ),
-        
               /// Indicators + Buttons
               Container(
                 alignment: const Alignment(0, 0.99),
@@ -130,14 +132,16 @@ class _IntroScreenState extends State<IntroScreen> {
                         effect: WormEffect(
                           dotHeight: 8.0,
                           dotWidth: 8.0,
-                          dotColor: AppColors.darkPurple,
-                          activeDotColor: AppColors.purple,
+                          dotColor:themeProvider.isDarkMode? AppColors.offWhite: AppColors.black,
+                          activeDotColor: AppColors.purple
                         ),
                       ),
-        
+
                       onLastPage
                           ? GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const LoginScreen()));
+                              },
                               child: Text(S.of(context).done),
                             )
                           : GestureDetector(

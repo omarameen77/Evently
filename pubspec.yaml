@@ -5,7 +5,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.9.2
+  sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -16,6 +16,9 @@ dependencies:
   animated_toggle_switch: ^0.8.5
   flutter_localization: ^0.3.3
   smooth_page_indicator: ^1.2.1
+  http: ^1.1.0
+  intl: ^0.20.2
+  google_generative_ai: ^0.4.7
 
 dev_dependencies:
   flutter_test:
@@ -33,5 +36,6 @@ flutter:
       fonts:
         - asset: assets/fonts/InterBold.ttf
           weight: 700
+
 flutter_intl:
   enabled: true
