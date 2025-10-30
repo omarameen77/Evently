@@ -11,7 +11,6 @@ class SwitchThemeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     bool isDark = themeProvider.isDarkMode;
-
     return CustomSwitchWidget<bool>(
       currentValue: isDark,
       values: const [true, false],

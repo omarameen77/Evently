@@ -1,7 +1,7 @@
 import 'package:evently/core/consts/app_image.dart';
 import 'package:evently/core/theme/app_colors.dart';
 import 'package:evently/core/theme/app_text_style/app_text_style.dart';
-import 'package:evently/features/auth/login_screen.dart';
+import 'package:evently/features/auth/login/login_screen.dart';
 import 'package:evently/features/onboarding/widgets/custom_pageIntro.dart';
 import 'package:evently/generated/l10n.dart';
 import 'package:evently/provider/theme_provider.dart';

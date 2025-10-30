@@ -13,11 +13,16 @@ final ThemeData lightTheme = ThemeData(
     surface: AppColors.lightBlue,
     onSurface: AppColors.black,
   ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: AppColors.purple,
+    iconSize: 40,
+  ),
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: AppColors.purple,
     selectedItemColor: AppColors.lightBlue,
     unselectedItemColor: AppColors.lightBlue,
   ),
+  // Filled Button Theme
   filledButtonTheme: FilledButtonThemeData(
     style: FilledButton.styleFrom(
       padding: EdgeInsets.all(10),
@@ -25,6 +30,7 @@ final ThemeData lightTheme = ThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
     ),
   ),
+  // Elevated Button Theme
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -32,6 +38,7 @@ final ThemeData lightTheme = ThemeData(
       textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
     ),
   ),
+  // Outlined Button Theme
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -41,12 +48,14 @@ final ThemeData lightTheme = ThemeData(
       side: BorderSide(color: AppColors.purple, width: 1),
     ),
   ),
+  // App Bar Theme
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.transparent,
     foregroundColor: AppColors.purple,
     surfaceTintColor: Colors.transparent,
     centerTitle: true,
   ),
+  // Text Field Theme
   inputDecorationTheme: InputDecorationTheme(
     prefixIconColor: AppColors.gray,
     suffixIconColor: AppColors.gray,

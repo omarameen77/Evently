@@ -32,6 +32,10 @@ final ThemeData darkTheme = ThemeData(
       textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
     ),
   ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: AppColors.darkPurple,
+    iconSize: 40,
+  ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
